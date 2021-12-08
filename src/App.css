@@ -11,6 +11,7 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   padding: 1rem;
+  height: 90vh;
 }
 .movieData {
   justify-self: center;
@@ -41,9 +42,14 @@ button {
   color: red;
 }
 
+.noMovies {
+  grid-template-rows: 1fr;
+}
+.noMovies span {
+  justify-self: center;
+  align-self: center;
+}
 
-
-.noMovies {}
 
 
 @media screen and (max-width: 760px) {
