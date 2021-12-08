@@ -6,6 +6,13 @@
             "title": "Star Wars: Episode VII - The Force Awakens",
             "summary": "Lorem ipsum….",
             "rating": 8.2
+        },
+        {
+            "id": "2302abc",
+            "imageURL": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SY1000_CR0,0,677,1000_AL_.jpg",
+            "title": "Bladerunner",
+            "summary": "Lorem ipsum….",
+            "rating": 8.2
         }
     ],
     "recommendations": []
