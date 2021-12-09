@@ -1,4 +1,4 @@
 {
-    "/recommendations/:id/accept": "/recommendations/:id/:command",
-    "/recommendations/:id/reject": "/recommendations/:id/:command"
+    "/recommendations/:id/accept": "/recommendations/:id",
+    "/recommendations/:id/reject": "/recommendations/:id"
 }
