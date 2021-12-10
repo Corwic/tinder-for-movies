@@ -6,7 +6,7 @@
       "title": "Star Wars: Episode VII - The Force Awakens",
       "summary": "Lorem ipsum….",
       "rating": 8.2,
-      "accepted": "true"
+      "accepted": "false"
     },
     {
       "id": "ab1232c",
@@ -14,7 +14,7 @@
       "title": "Clifford",
       "summary": "Lorem ipsum….",
       "rating": 6.9,
-      "accepted": "false"
+      "accepted": "true"
     },
     {
       "id": "2221abc",
@@ -30,7 +30,7 @@
       "title": "Auf der anderen Seite",
       "summary": "Lorem ipsum….",
       "rating": 6.9,
-      "accepted": "false"
+      "accepted": "true"
     },
     {
       "id": "2331abc",
