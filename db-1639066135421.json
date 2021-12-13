@@ -1,0 +1,52 @@
+{
+  "recommendations": [
+    {
+      "id": "2301abc",
+      "imageURL": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SY1000_CR0,0,677,1000_AL_.jpg",
+      "title": "Star Wars: Episode VII - The Force Awakens",
+      "summary": "Lorem ipsum….",
+      "rating": 8.2,
+      "accepted": "true"
+    },
+    {
+      "id": "ab1232c",
+      "imageURL": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQr52xgKbOq-XJuwQEknttmudqatCNYwXUIg3O4k02E6eNZmPXd",
+      "title": "Clifford",
+      "summary": "Lorem ipsum….",
+      "rating": 6.9,
+      "accepted": "false"
+    },
+    {
+      "id": "2221abc",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvJznVehDbSUPihJbSTNwH8Tgnvh4ZDxs0J4hV06wOvHHidHul",
+      "title": "Dune",
+      "summary": "Lorem ipsum….",
+      "rating": 8.2,
+      "accepted": "true"
+    },
+    {
+      "id": "ab00232c",
+      "imageURL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crew-united.com%2Fpl%2FAuf-der-anderen-Seite__36516.html&psig=AOvVaw05a4Fn2iilgjr_oNLs2fsv&ust=1639152343947000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjYm7yM1_QCFQAAAAAdAAAAABAD",
+      "title": "Auf der anderen Seite",
+      "summary": "Lorem ipsum….",
+      "rating": 6.9,
+      "accepted": "false"
+    },
+    {
+      "id": "2331abc",
+      "imageURL": "https://fwcdn.pl/fpo/02/04/720204/7735388.3.jpg",
+      "title": "Captain Fantastic",
+      "summary": "Lorem ipsum….",
+      "rating": 8.2,
+      "accepted": "false"
+    },
+    {
+      "id": "ab1200c",
+      "imageURL": "https://m.media-amazon.com/images/I/61sp1GYsdpL._AC_.jpg",
+      "title": "The Road",
+      "summary": "Lorem ipsum….",
+      "rating": 6.9,
+      "accepted": "false"
+    }
+  ]
+}
