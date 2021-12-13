@@ -5,6 +5,8 @@
   "homepage": "https://corwic.github.io/tinder-for-movies/",
   "scripts": {
     "start": "react-scripts start",
+    "std": "standard",
+    "fix": "standard --fix",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
