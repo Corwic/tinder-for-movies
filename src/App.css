@@ -11,7 +11,7 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   padding: 1rem;
-  height: 90vh;
+  height: calc(90vh - 40px);;
 }
 .movieData {
   justify-self: center;
@@ -56,7 +56,7 @@ button {
   .movieFrame {
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(90vh - 40px);;
     grid-template-rows: 1fr 10fr 1fr;
   }
 }
