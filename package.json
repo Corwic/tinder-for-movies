@@ -2,12 +2,15 @@
   "name": "tinder-for-movies",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://corwic.github.io/tinder-for-movies/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server ./src/mocks/db.json --routes ./src/mocks/routes.json -p 3001"
+    "server": "json-server ./src/mocks/db.json --routes ./src/mocks/routes.json -p 3001",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
