@@ -15,7 +15,7 @@ h1 {
   display: grid;
   grid-template-rows: repeat(3, auto);
   padding: 1rem;
-  height: calc(90vh - 40px);;
+  height: calc(90vh - 40px);
 }
 
 .movie-data {
@@ -27,7 +27,7 @@ h1 {
 .movie-img {
   margin: 0 auto;
   max-height: 60vh;
-} 
+}
 
 .buttons {
   padding: 1rem;
