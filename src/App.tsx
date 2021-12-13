@@ -1,7 +1,7 @@
 import './App.css';
 import { MoviesContext } from './common';
 import MovieWrapper from './components/MovieWrapper'
-import { useMovies } from "./common"
+import { useMovies } from './common'
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <MovieWrapper />
       </div>
     </MoviesContext.Provider>
-  );
+  )
 }
 
 export default App;

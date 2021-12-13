@@ -1,4 +1,4 @@
-import { Movie } from "../types";
+import { Movie } from '../types'
 
 export const sendResult = async (movie: Movie, result: "accept" | "reject") => {
     const url = process.env.REACT_APP_SERVER_URL
