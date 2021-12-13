@@ -1,5 +1,5 @@
-import { useSwipe } from "../common";
-import { Movie } from "../types";
+import { useSwipe } from '../common';
+import { Movie } from '../types';
 
 interface SelecionProps {
     movie: Movie;
@@ -12,15 +12,15 @@ const MovieSelection = ({movie, accept, reject}: SelecionProps) => {
 
     return (
         <div 
-            className = "movieFrame"
+            className = "movie-frame"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
             >
-            <div className = "movieData">
+            <div className = "movie-data">
                 <span>{ movie.title }</span>{ ` (${ movie.rating }/10)` }
             </div>
-            <img className = "movieImg"
+            <img className = "movie-img"
                 src = { movie.imageURL } alt = {`${ movie.title } poster`} />
             <div className = "buttons">
                 <button 

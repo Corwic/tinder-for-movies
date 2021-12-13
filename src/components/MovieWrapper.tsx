@@ -1,6 +1,6 @@
-import { useState, useContext } from "react";
-import MovieSelection from "./MovieSelection";
-import { MoviesContext, sendResult } from "../common"
+import { useState, useContext } from 'react';
+import MovieSelection from './MovieSelection';
+import { MoviesContext, sendResult } from '../common'
 
 const MovieWrapper = () => {
     const movies = useContext( MoviesContext )
@@ -20,14 +20,14 @@ const MovieWrapper = () => {
     
     return movies.length === 0                  
             // no movies in array
-            ?   <div className="movieFrame noMovies">
+            ?   <div className="movie-frame no-movies">
                     <span>Nothing to show</span>
                 </div>
             : movies?.length > num              
             // there are movies in array
             ? <MovieSelection movie={ movies[num] } accept={ accept } reject={ reject }/>
             // the list of movies is exhausted
-            :   <div className="movieFrame noMovies"> 
+            :   <div className="movie-frame no-movies"> 
                     <span>No more movies in your list</span>
                 </div>                          
 }

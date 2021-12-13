@@ -10,19 +10,21 @@ h1 {
   text-align: center;
 }
 
-.movieFrame {
+.movie-frame {
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, auto);
   padding: 1rem;
   height: calc(90vh - 40px);;
 }
-.movieData {
+
+.movie-data {
   justify-self: center;
   align-self: center;
   padding: 1rem;
 }
-.movieImg {
+
+.movie-img {
   margin: 0 auto;
   max-height: 60vh;
 } 
@@ -33,7 +35,7 @@ h1 {
   justify-content: space-between;
 }
 
-button { 
+button {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -42,25 +44,25 @@ button {
 .accept {
   color: green;
 }
+
 .reject {
   color: red;
 }
 
-.noMovies {
+.no-movies {
   grid-template-rows: 1fr;
 }
-.noMovies span {
+
+.no-movies span {
   justify-self: center;
   align-self: center;
 }
 
-
-
 @media screen and (max-width: 760px) {
-  .movieFrame {
+  .movie-frame {
     padding: 0;
     width: 100vw;
-    height: calc(90vh - 40px);;
+    height: calc(90vh - 40px);
     grid-template-rows: 1fr 10fr 1fr;
   }
 }

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Movie } from "../types";
+import { useState, useEffect } from 'react';
+import { Movie } from '../types';
 
 export const useMovies = () => {
     //const [isLoading, setIsLoading] = useState()
