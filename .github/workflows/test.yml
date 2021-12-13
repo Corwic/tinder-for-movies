@@ -22,10 +22,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          eslint: true
-          prettier: true
+      uses: wearerequired/lint-action@v1
+      with:
+        eslint: true
+        prettier: true
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
