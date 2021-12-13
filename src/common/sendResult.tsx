@@ -12,7 +12,7 @@ export const sendResult = async (movie: Movie, result: "accept" | "reject") => {
     }
 
     try {
-        const res = await fetch(`${url}/recommendations/${movie.id}/${result}`, putOptions)
+        await fetch(`${url}/recommendations/${movie.id}/${result}`, putOptions)
     } catch (err) {
         console.log('Problem with sending results', err);
     }
