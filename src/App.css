@@ -21,6 +21,7 @@ h1 {
 .movie-data {
   justify-self: center;
   align-self: center;
+  text-align: center;
   padding: 1rem;
 }
 
@@ -59,6 +60,10 @@ button {
 }
 
 @media screen and (max-width: 760px) {
+  .app {
+    width: 100vw;
+  }
+
   .movie-frame {
     padding: 0;
     width: 100vw;
