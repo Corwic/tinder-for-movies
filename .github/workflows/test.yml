@@ -27,7 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
+    - run: git config user.email "v.corwic@gmail.com"
+    - run: npm run deploy --if-present
     - run: npm test
 
   lint:
@@ -41,11 +42,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         FILTER_REGEX_EXCLUDE: .*test.*
+        #VALIDATE_JAVASCRIPT_STANDARD: false
+        #VALIDATE_TYPESCRIPT_STANDARD: false
         #JAVASCRIPT_DEFAULT_STYLE: prettier
         #TYPESCRIPT_DEFAULT_STYLE: prettier
-        VALIDATE_JAVASCRIPT_STANDARD: false
-        VALIDATE_TYPESCRIPT_STANDARD: false
-        #VALIDATE_CSS: false
 
 
     
