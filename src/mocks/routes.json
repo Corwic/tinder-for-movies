@@ -1,4 +1,0 @@
-{
-    "/recommendations/:id/accept": "/recommendations/:id",
-    "/recommendations/:id/reject": "/recommendations/:id"
-}
