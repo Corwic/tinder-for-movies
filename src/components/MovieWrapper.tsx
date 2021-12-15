@@ -8,6 +8,7 @@ const MovieWrapper = () => {
     const increase = (): void => setNum( num + 1 ) 
 
     const accept = (): void => {
+        // there's still a need in error handling of PUT reuest here. 
         sendResult(movies[num].id, 'accept')
         increase()
     }
