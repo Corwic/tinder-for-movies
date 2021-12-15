@@ -37,6 +37,7 @@ h1 {
 }
 
 button {
+  font-size: 1rem;
   background-color: transparent;
   border: none;
   padding: 0;
