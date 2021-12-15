@@ -35,9 +35,11 @@ const MovieWrapper = () => {
     }
 
     if (movies.length <= num) {
+        return (
         <div className="movie-frame no-movies"> 
             <span>No more movies in your list</span>
         </div> 
+        )
     }
 
     return (
