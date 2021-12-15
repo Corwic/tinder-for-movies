@@ -3,18 +3,17 @@ import MovieSelection from './MovieSelection'
 import { MoviesContext, sendResult } from '../common'
 
 const MovieWrapper = () => {
-    const { movies, isLoading } = useContext( MoviesContext )
+    const { movies, isLoading, error } = useContext( MoviesContext )
     const [ num, setNum ] = useState( 0 )
     const increase = (): void => setNum( num + 1 ) 
 
     const accept = (): void => {
-        // console.log(movies[num].title, 'is accepted');
-        sendResult(movies[num], 'accept')
+        // there's still a need in error handling of PUT reuest here. 
+        sendResult(movies[num].id, 'accept')
         increase()
     }
     const reject = (): void => {
-        // console.log(movies[num].title, 'is rejected');
-        sendResult(movies[num], 'reject')
+        sendResult(movies[num].id, 'reject')
         increase()
     }
     
@@ -26,7 +25,15 @@ const MovieWrapper = () => {
         )
     }
 
-    if (movies.length === 0) {
+    if (!isLoading && movies.length === 0 && error) {
+        return (
+            <div className="movie-frame no-movies">
+                <span>{error.toString()}</span>
+            </div>
+        )
+    }
+
+    if (!isLoading && movies.length === 0 && !error) {
         return (
             <div className="movie-frame no-movies">
                 <span>Nothing to show</span>
@@ -35,9 +42,11 @@ const MovieWrapper = () => {
     }
 
     if (movies.length <= num) {
-        <div className="movie-frame no-movies"> 
-            <span>No more movies in your list</span>
-        </div> 
+        return (
+            <div className="movie-frame no-movies"> 
+                <span>No more movies in your list</span>
+            </div> 
+        )
     }
 
     return (
@@ -46,7 +55,7 @@ const MovieWrapper = () => {
             accept={ accept }
             reject={ reject }
         />
-    );
+    )
 }
 
 export default MovieWrapper

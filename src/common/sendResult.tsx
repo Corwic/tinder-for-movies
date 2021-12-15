@@ -1,8 +1,7 @@
-import { Movie } from '../types'
 
-export const sendResult = async (movie: Movie, result: "accept" | "reject") => {
+export const sendResult = async (movieID: string, result: "accept" | "reject") => {
     const url = process.env.REACT_APP_SERVER_URL
-    const body = { ...movie, accepted: result === 'accept' ? 'true' : 'false' }
+    const body = { accepted: result === 'accept' ? 'true' : 'false' }
     const putOptions = {
         method: 'PUT',
         body: JSON.stringify(body),
@@ -11,10 +10,8 @@ export const sendResult = async (movie: Movie, result: "accept" | "reject") => {
         },
     }
 
-    try {
-        await fetch(`${url}/recommendations/${movie.id}/${result}`, putOptions)
-    } catch (err) {
-        console.log('Problem with sending results', err);
-    }
+    const res = await fetch(`${url}/recommendations/${movieID}/${result}`, putOptions)
+    const updatedMovie = await res.json()
+    console.log(`${movieID} is updated`, updatedMovie)        
 
 }

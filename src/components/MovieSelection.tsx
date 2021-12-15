@@ -8,7 +8,11 @@ interface SelecionProps {
 }
 
 const MovieSelection = ({movie, accept, reject}: SelecionProps) => {
-    const [handleTouchStart, handleTouchMove, handleTouchEnd] = useSwipe({action: reject, data: movie.id})
+    const [ handleTouchStart, handleTouchMove, handleTouchEnd ] = useSwipe({
+        rightAction: reject, 
+        // leftAction: accept, 
+        data: movie.id
+    })
 
     return (
         <div 

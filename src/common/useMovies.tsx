@@ -2,28 +2,28 @@ import { useState, useEffect } from 'react'
 import { Movie } from '../types'
 
 export const useMovies = () => {
-    //const [isLoading, setIsLoading] = useState()
-    const [data, setMovies] = useState<Movie[]>([])
+    const [ isLoading, setIsLoading ] = useState<boolean>(true)
+    const [ movies, setMovies ] = useState<Movie[]>([])
+    const [ error, setError ] = useState<any>('')
 
     useEffect(() => {
         (async function() {
             const url = process.env.REACT_APP_SERVER_URL
-            //setIsLoading(true)
             try {
                 const response = await fetch(`${url}/recommendations/`)
-                const status = await response.status
-                if (status !== 200) {
-                    console.log(status);
-                    return
+                if (response.status !== 200) {
+                    console.log('Error', response.status, response.statusText)
+                    throw new Error(response.statusText) 
                 }
                 const data: Movie[] = await response.json()
                 setMovies(data)
-                //setIsLoading(false)
-            } catch (err) {
-                console.log('GET request failed', err);
+            } catch (err: any) {
+                setError(err)
             }
-        })();
+            setIsLoading(false)
+        })()
+
     }, [])
 
-    return { data }
+    return { movies, isLoading, error }
 }

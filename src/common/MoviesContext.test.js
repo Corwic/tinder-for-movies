@@ -1,10 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import { MoviesContext } from '.'
 
-describe('Testing provider', () => {
+describe('MoviesContext. Testing provider', () => {
   const MovieConsumer = () => (
     <MoviesContext.Consumer>
-      {value => value && value.length === 0 ? <div>The value is empty array</div> : <div>The value is {value[0].title}</div>}
+      {value => value.movies && value.movies.length === 0 
+        ? <div>The value is empty array</div> 
+        : <div>The value is {value.movies[0].title}</div>
+      }
     </MoviesContext.Consumer>
   )
 
@@ -18,7 +21,11 @@ describe('Testing provider', () => {
 
   test('Context shows set value', () => {
     render(
-      <MoviesContext.Provider value={[{ title: 'op' }]}>
+      <MoviesContext.Provider value={{
+        movies: [{ title: 'op' }],
+        isLoading: true,
+        error: ''
+      }}>
         <MovieConsumer />
       </MoviesContext.Provider>
     )
