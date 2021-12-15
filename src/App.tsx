@@ -3,6 +3,16 @@ import { MoviesContext } from './common'
 import MovieWrapper from './components/MovieWrapper'
 import { useMovies } from './common'
 
+(async function () {
+  if (process.env.NODE_ENV === 'development') {
+    const { worker } = require('./mocks/browser')
+    await worker.start({
+      serviceWorker: {
+        url: '/tinder-for-movies/mockServiceWorker.js',
+      },
+    })
+  }
+})()
 
 function App() {
   const { data } = useMovies()
