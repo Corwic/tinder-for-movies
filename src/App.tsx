@@ -15,10 +15,9 @@ import { useMovies } from './common'
 })()
 
 function App() {
-  const { data } = useMovies()
+  const data = useMovies()
 
   return (
-    // @ts-ignore
     <MoviesContext.Provider value={ data }>
       <div className="app">
         <h1 className="app-title">Tinder for Movies</h1>
