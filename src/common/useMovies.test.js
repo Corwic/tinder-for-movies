@@ -1,14 +1,16 @@
 import { render, screen } from '@testing-library/react'
 import { useMovies } from '.'
 
-test('returns the array of movies', async () => {
-  const Test = () => {
-    const { data } = useMovies()
-    return data[0] ? <div>{data[0].title}</div> : ''
-  }
 
-  render(<Test />)
-  await screen.findByText('Star Wars: Episode VII - The Force Awakens')
+describe ('useMovies', () => {
+    test('returns the array of movies', async () => {
+        const Test = () => {
+          const { movies } = useMovies()
+          return movies[0] ? <div>{movies[0].title}</div> : ''
+        }
 
-  expect(screen.getByText('Star Wars: Episode VII - The Force Awakens')).toBeInTheDocument()
+        render(<Test />)
+        
+        expect(await screen.findByText('Star Wars: Episode VII - The Force Awakens')).toBeInTheDocument()
+    })
 })

@@ -3,10 +3,12 @@ import { Movie } from '../types'
 
 interface Context {
   movies: Movie[],
-  isLoading: boolean
+  isLoading: boolean,
+  error: any
 }
 
 export const MoviesContext = createContext< Context >( {
   movies: [],
-  isLoading: false
+  isLoading: true,
+  error: ''
 } )
