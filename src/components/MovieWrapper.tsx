@@ -1,9 +1,9 @@
-import { useState, useContext } from 'react';
-import MovieSelection from './MovieSelection';
+import { useState, useContext } from 'react'
+import MovieSelection from './MovieSelection'
 import { MoviesContext, sendResult } from '../common'
 
 const MovieWrapper = () => {
-    const movies = useContext( MoviesContext )
+    const { movies, isLoading } = useContext( MoviesContext )
     const [ num, setNum ] = useState( 0 )
     const increase = (): void => setNum( num + 1 ) 
 
@@ -18,18 +18,35 @@ const MovieWrapper = () => {
         increase()
     }
     
-    return movies.length === 0                  
-            // no movies in array
-            ?   <div className="movie-frame no-movies">
-                    <span>Nothing to show</span>
-                </div>
-            : movies?.length > num              
-            // there are movies in array
-            ? <MovieSelection movie={ movies[num] } accept={ accept } reject={ reject }/>
-            // the list of movies is exhausted
-            :   <div className="movie-frame no-movies"> 
-                    <span>No more movies in your list</span>
-                </div>                          
+    if (isLoading) {
+        return (
+            <div className="movie-frame no-movies">
+                <span>Loading...</span>
+            </div>
+        )
+    }
+
+    if (movies.length === 0) {
+        return (
+            <div className="movie-frame no-movies">
+                <span>Nothing to show</span>
+            </div>
+        )
+    }
+
+    if (movies.length <= num) {
+        <div className="movie-frame no-movies"> 
+            <span>No more movies in your list</span>
+        </div> 
+    }
+
+    return (
+        <MovieSelection
+            movie={ movies[num] }
+            accept={ accept }
+            reject={ reject }
+        />
+    );
 }
 
 export default MovieWrapper

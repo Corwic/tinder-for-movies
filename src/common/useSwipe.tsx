@@ -1,4 +1,4 @@
-import { TouchEvent, useState } from 'react';
+import { TouchEvent, useState } from 'react'
 
 interface SwipeProps {
     data: string | number;

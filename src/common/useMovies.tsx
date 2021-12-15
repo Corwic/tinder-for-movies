@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Movie } from '../types';
+import { useState, useEffect } from 'react'
+import { Movie } from '../types'
 
 export const useMovies = () => {
     //const [isLoading, setIsLoading] = useState()
@@ -16,7 +16,7 @@ export const useMovies = () => {
                     console.log(status);
                     return
                 }
-                const data = await response.json()
+                const data: Movie[] = await response.json()
                 setMovies(data)
                 //setIsLoading(false)
             } catch (err) {

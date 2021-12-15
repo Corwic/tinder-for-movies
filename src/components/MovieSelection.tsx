@@ -1,5 +1,5 @@
-import { useSwipe } from '../common';
-import { Movie } from '../types';
+import { useSwipe } from '../common'
+import { Movie } from '../types'
 
 interface SelecionProps {
     movie: Movie;
