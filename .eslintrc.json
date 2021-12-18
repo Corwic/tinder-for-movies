@@ -10,7 +10,6 @@
   },
   "rules": {
     "semi": "off",
-    "@typescript-eslint/semi": ["error", "never"],
     "react/jsx-filename-extension": [1, {
       "extensions": [".jsx", ".tsx"]
     }],
