@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { Movie } from '../types'
+import { Movie } from '../types/Movie'
 
 interface Context {
   movies: Movie[],
@@ -7,8 +7,10 @@ interface Context {
   error: any
 }
 
-export const MoviesContext = createContext< Context >( {
+const MoviesContext = createContext< Context >({
   movies: [],
   isLoading: true,
-  error: ''
-} )
+  error: '',
+})
+
+export default MoviesContext

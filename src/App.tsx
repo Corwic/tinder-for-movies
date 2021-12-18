@@ -1,24 +1,25 @@
+import React from 'react'
 import './App.css'
-import { MoviesContext } from './common'
+import { MoviesContext, useMovies } from './common'
 import MovieWrapper from './components/MovieWrapper'
-import { useMovies } from './common'
+import worker from './mocks/browser'
 
-(async function () {
+(async function runWorkerIf() {
   if (process.env.NODE_ENV === 'development') {
-    const { worker } = require('./mocks/browser')
+    // const { worker } = require('./mocks/browser')
     await worker.start({
       serviceWorker: {
         url: '/tinder-for-movies/mockServiceWorker.js',
       },
     })
   }
-})()
+}())
 
-function App() {
+const App = function () {
   const data = useMovies()
 
   return (
-    <MoviesContext.Provider value={ data }>
+    <MoviesContext.Provider value={data}>
       <div className="app">
         <h1 className="app-title">Tinder for Movies</h1>
         <MovieWrapper />

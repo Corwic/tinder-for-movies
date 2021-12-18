@@ -1,3 +1,4 @@
+import React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
 import { act } from 'react-dom/test-utils'
 import MovieSelection from './MovieSelection'
@@ -23,7 +24,7 @@ test('renders movie data', async () => {
     title: 'Captain Fantastic',
     summary: 'Lorem ipsum….',
     rating: 8.2,
-    accepted: 'true'
+    accepted: 'true',
   }
 
   await act(async () => {
