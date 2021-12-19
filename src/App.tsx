@@ -2,11 +2,11 @@ import React from 'react'
 import './App.css'
 import { MoviesContext, useMovies } from './common'
 import MovieWrapper from './components/MovieWrapper'
-import worker from './mocks/browser'
 
 (async function runWorkerIf() {
   if (process.env.NODE_ENV === 'development') {
-    // const { worker } = require('./mocks/browser')
+    // eslint-disable-next-line global-require
+    const { worker } = require('./mocks/browser')
     await worker.start({
       serviceWorker: {
         url: '/tinder-for-movies/mockServiceWorker.js',

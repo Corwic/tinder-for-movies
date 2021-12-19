@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import MoviesContext from '.'
+import { MoviesContext } from '.'
 
 const ctxValue = {
   movies: [{ title: 'op' }],
@@ -17,7 +17,7 @@ describe('MoviesContext. Testing provider', () => {
           : (
             <div>
               The value is
-              {value.movies[0].title}
+              {` ${value.movies[0].title}`}
             </div>
           ))}
       </MoviesContext.Consumer>
